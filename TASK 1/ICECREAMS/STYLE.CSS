@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }  
+  :root {
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: #fca607;
+
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  .hero-section {
+    min-height: 100vh;
+    background: url("https://media.istockphoto.com/id/930933962/photo/colorful-ice-cream-border.jpg?s=612x612&w=0&k=20&c=h5wJ6TzP7QWpoi7QHdbKoE_0SKU91nY1v1T23W_BMC0=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: #0c0c0c;
+    font-family: Lucida Handwriting;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+  }
+  @keyframes movedown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  .navbar ul {
+    list-style: none;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #0c0c0c;
+    font-family:Lucida Handwriting;
+    border-bottom: 1px solid transparent;
+  }
+  .navbar ul li a:hover {
+    border-bottom: 2px solid var(--bg-color);
+  }
+  .hero-text {
+    color:#0c0c0c;
+    height: 90vh;
+    display: flex;
+    font-family: Lucida Handwriting;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  .hero-text::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1b1d1d;
+    font-family: TIMES NEW ROMAN;
+    z-index: -1;
+    top: 0;
+    opacity: 0.6;
+  }
+  .hero-text a {
+    color:#1b1d1d;
+    font-family: TIMES NEW ROMAN;
+    background: var(--bg-color);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    display: block;
+    text-decoration: none;
+    transition: opacity 250ms linear;
+  }
+  .hero-text a:hover {
+    opacity: 0.8;
+  }
+  .hero-text h2 {
+    font-size: var(--head);
+  }
+  .hero-text p {
+    font-size: 3rem;
+  }
+  
